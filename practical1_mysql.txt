@@ -1,0 +1,114 @@
+create database Student;
+
+use Student;
+
+create table td1Parents(pid int ,pname varchar(20),city varchar(20), age int , annual_income int , occupation varchar(20), emailid varchar(50));
+
+insert into td1Parents(pid,pname,city,age,annual_income,occupation,emailid) values (101,'Ashutosh singh','Mumbai',45,800000,'Software Engineer','ashutoshsinghsingh02@gmail.com');
+
+insert into td1Parents(pid,pname,city,age,annual_income,occupation,emailid) values (102,'Harsh singh','Pune',42,700000,'Developer','Harshsingh2003@gmail.com'),(103,'Shivam jaiswar','Banglore',50,550000,'Teacher','shivamjaiswar00@gmail.com'),(104,'prathamesh yadav','Hydrabad',42,'560000','Professor','Prathmeshyadav@gmail.com');
+
+mysql> insert into td1Parents(pid,pname,city,age,annual_income,occupation,emailid) values (105,'Harsh yadav','Delhi',42,400000,'Cook','Harshyadav3@gmail.com'),(106,'Suyash mishra','Ahmadabad',50,550000,'Teacher','suyashmishra00@gmail.com'),(107,'pramode yadav','Hydrabad',58,'560000','Customs Inspector','Pramodeyadav@gmail.com');
+
+mysql> insert into td1Parents(pid,pname,city,age,annual_income,occupation,emailid) values (108,'sumit yadav','Ambala',42,400000,'singer','sumityadav@gmail.com'),(109,'Sourav mishra','Aurangabad',38,350000,'Dancer','souravmishra00@gmail.com'),(110,'Ayush chavan','Chennai',58,600000,'Lawyer','Auysh@gmail.com');
+
+
+insert into td1Parents(pid,pname,city,age,annual_income,occupation,emailid) values (114,'pram singh','Ambala',42,400000,'Accountant','pramv@gmail.com'),(115,'Sunny','Aurangabad',48,15000,'Dancer','sunny00@gmail.com'),(115,'Avi Dubay','Bnglore',58,600000,'Art Director','Avih@gmail.com');
+
+insert into td1Parents(pid,pname,city,age,annual_income,occupation,emailid) values (116,'priya singh','Ambala',42,400000,'Accountant','priya@gmail.com'),(117,'Sourav singh','Bopal',38,15000,'Dancer','sourav0@gmail.com'),(118,'Ayush Dubay','Delhi',58,600000,'Art Director','Auysh@gmail.com'),(119,'Nishant','Ambala',50,550000,'Dancer','nishu@gmail.com'),(120,'Omkar','Pune',48,680000,'Officer','omkar@gmail.com');
+
+
+mysql> SELECT * FROM td1Parents;
++------+---------------------+------------+------+---------------+-------------------+--------------------------------+
+| pid  | pname               | city       | age  | annual_income | occupation        | emailid                        |
++------+---------------------+------------+------+---------------+-------------------+--------------------------------+
+|  101 | Ashutosh singh      | Mumbai     |   45 |        800000 | Software Engineer | ashutoshsinghsingh02@gmail.com |
+|  102 | Harsh singh         | Pune       |   42 |        700000 | Developer         | Harshsingh2003@gmail.com       |
+|  103 | Shivam jaiswar      | Banglore   |   50 |        550000 | Teacher           | shivamjaiswar00@gmail.com      |
+|  104 | prathamesh yadav    | Hydrabad   |   42 |        560000 | Professor         | Prathmeshyadav@gmail.com       |
+|  105 | Harsh yadav         | Delhi      |   42 |        400000 | Cook              | Harshyadav3@gmail.com          |
+|  106 | Suyash mishra       | Ahmadabad  |   50 |        550000 | Teacher           | suyashmishra00@gmail.com       |
+|  107 | pramode yadav       | Hydrabad   |   58 |        560000 | Customs Inspector | Pramodeyadav@gmail.com         |
+|  108 | sumit yadav         | Ambala     |   42 |        400000 | singer            | sumityadav@gmail.com           |
+|  109 | Sourav mishra       | Aurangabad |   38 |        350000 | Dancer            | souravmishra00@gmail.com       |
+|  110 | Ayush chavan        | Chennai    |   58 |        600000 | Lawyer            | Auysh@gmail.com                |
+|  111 | priyanshu singh     | Ambala     |   42 |        400000 | Accountant        | priyanshusinghv@gmail.com      |
+|  112 | Sourav souranvanshi | Aurangabad |   38 |         15000 | Dancer            | sourav00@gmail.com             |
+|  113 | Ayush Dubay         | Delhi      |   58 |        600000 | Art Director      | Auysh@gmail.com                |
+|  114 | pram singh          | Ambala     |   42 |        400000 | Accountant        | pramv@gmail.com                |
+|  115 | Sunny               | Aurangabad |   48 |         15000 | Dancer            | sunny00@gmail.com              |
+|  116 | priya singh         | Ambala     |   42 |        400000 | Accountant        | priya@gmail.com                |
+|  117 | Sourav singh        | Bopal      |   38 |         15000 | Dancer            | sourav0@gmail.com              |
+|  118 | Ayush Dubay         | Delhi      |   58 |        600000 | Art Director      | Auysh@gmail.com                |
+|  119 | Nishant             | Ambala     |   50 |        550000 | Dancer            | nishu@gmail.com                |
+|  120 | Omkar               | Pune       |   48 |        680000 | Officer           | omkar@gmail.com                |
++------+---------------------+------------+------+---------------+-------------------+--------------------------------+
+
+ UPDATE td1Parents SET emailid ="NA";
+Query OK, 20 rows affected (0.00 sec)
+Rows matched: 20  Changed: 20  Warnings: 0
+
+mysql> SELECT * FROM td1Parents;
++------+---------------------+------------+------+---------------+-------------------+---------+
+| pid  | pname               | city       | age  | annual_income | occupation        | emailid |
++------+---------------------+------------+------+---------------+-------------------+---------+
+|  101 | Ashutosh singh      | Mumbai     |   45 |        800000 | Software Engineer | NA      |
+|  102 | Harsh singh         | Pune       |   42 |        700000 | Developer         | NA      |
+|  103 | Shivam jaiswar      | Banglore   |   50 |        550000 | Teacher           | NA      |
+|  104 | prathamesh yadav    | Hydrabad   |   42 |        560000 | Professor         | NA      |
+|  105 | Harsh yadav         | Delhi      |   42 |        400000 | Cook              | NA      |
+|  106 | Suyash mishra       | Ahmadabad  |   50 |        550000 | Teacher           | NA      |
+|  107 | pramode yadav       | Hydrabad   |   58 |        560000 | Customs Inspector | NA      |
+|  108 | sumit yadav         | Ambala     |   42 |        400000 | singer            | NA      |
+|  109 | Sourav mishra       | Aurangabad |   38 |        350000 | Dancer            | NA      |
+|  110 | Ayush chavan        | Chennai    |   58 |        600000 | Lawyer            | NA      |
+|  111 | priyanshu singh     | Ambala     |   42 |        400000 | Accountant        | NA      |
+|  112 | Sourav souranvanshi | Aurangabad |   38 |         15000 | Dancer            | NA      |
+|  113 | Ayush Dubay         | Delhi      |   58 |        600000 | Art Director      | NA      |
+|  114 | pram singh          | Ambala     |   42 |        400000 | Accountant        | NA      |
+|  115 | Sunny               | Aurangabad |   48 |         15000 | Dancer            | NA      |
+|  116 | priya singh         | Ambala     |   42 |        400000 | Accountant        | NA      |
+|  117 | Sourav singh        | Bopal      |   38 |         15000 | Dancer            | NA      |
+|  118 | Ayush Dubay         | Delhi      |   58 |        600000 | Art Director      | NA      |
+|  119 | Nishant             | Ambala     |   50 |        550000 | Dancer            | NA      |
+|  120 | Omkar               | Pune       |   48 |        680000 | Officer           | NA      |
++------+---------------------+------------+------+---------------+-------------------+---------+
+20 rows in set (0.00 sec)
+
+mysql> SELECT COUNT(*) FROM td1Parents WHERE annual_income > 600000;
++----------+
+| COUNT(*) |
++----------+
+|        3 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select * from td1Parents WHERE city IN('Ahmadabad', 'Delhi', 'Mumbai', 'Chennai', 'Banglore');
++------+----------------+-----------+------+---------------+-------------------+---------+
+| pid  | pname          | city      | age  | annual_income | occupation        | emailid |
++------+----------------+-----------+------+---------------+-------------------+---------+
+|  101 | Ashutosh singh | Mumbai    |   45 |        800000 | Software Engineer | NA      |
+|  103 | Shivam jaiswar | Banglore  |   50 |        550000 | Teacher           | NA      |
+|  105 | Harsh yadav    | Delhi     |   42 |        400000 | Cook              | NA      |
+|  106 | Suyash mishra  | Ahmadabad |   50 |        550000 | Teacher           | NA      |
+|  110 | Ayush chavan   | Chennai   |   58 |        600000 | Lawyer            | NA      |
+|  113 | Ayush Dubay    | Delhi     |   58 |        600000 | Art Director      | NA      |
+|  118 | Ayush Dubay    | Delhi     |   58 |        600000 | Art Director      | NA      |
++------+----------------+-----------+------+---------------+-------------------+---------+
+7 rows in set (0.00 sec)
+
+mysql> SELECT * FROM td1Parents WHERE annual_income < 500000;
++------+---------------------+------------+------+---------------+------------+---------+
+| pid  | pname               | city       | age  | annual_income | occupation | emailid |
++------+---------------------+------------+------+---------------+------------+---------+
+|  105 | Harsh yadav         | Delhi      |   42 |        400000 | Cook       | NA      |
+|  108 | sumit yadav         | Ambala     |   42 |        400000 | singer     | NA      |
+|  109 | Sourav mishra       | Aurangabad |   38 |        350000 | Dancer     | NA      |
+|  111 | priyanshu singh     | Ambala     |   42 |        400000 | Accountant | NA      |
+|  112 | Sourav souranvanshi | Aurangabad |   38 |         15000 | Dancer     | NA      |
+|  114 | pram singh          | Ambala     |   42 |        400000 | Accountant | NA      |
+|  115 | Sunny               | Aurangabad |   48 |         15000 | Dancer     | NA      |
+|  116 | priya singh         | Ambala     |   42 |        400000 | Accountant | NA      |
+|  117 | Sourav singh        | Bopal      |   38 |         15000 | Dancer     | NA      |
++------+---------------------+------------+------+---------------+------------+---------+
+9 rows in set (0.00 sec)
